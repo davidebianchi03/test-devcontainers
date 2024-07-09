@@ -39,5 +39,7 @@ services:
   another-service:
     image: mongo:latest
     restart: unless-stopped
+    ports:
+      - 27017:27017
 
     # As in the "app" service, use "forwardPorts" in **devcontainer.json** to forward an app port locally.
