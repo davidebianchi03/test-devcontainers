@@ -23,4 +23,4 @@ services:
       - 27017:27017
 
 volumes:
-  - test
+  test:
