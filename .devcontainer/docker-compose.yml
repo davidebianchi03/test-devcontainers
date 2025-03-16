@@ -19,13 +19,9 @@ services:
   another-service:
     image: mongo:latest
     restart: unless-stopped
-    ports:
-      - 27017:27017
 
   mysql:
     image: mysql:latest
-    ports:
-      - 3307:3306
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_USER: user
@@ -41,8 +37,6 @@ services:
       PMA_PORT: 3306
       PMA_ARBITRARY: 1
     restart: always
-    ports:
-      - 8183:80
       
 volumes:
   test:
